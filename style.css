@@ -750,3 +750,78 @@ button:focus-visible {
     color: #d69410;
     font-weight: 700;
 }
+.book-cover {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.book-cover img {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 260px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 600px) {
+  .book-cover,
+  .book-cover img {
+    max-width: 180px;
+  }
+  
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.book-detail-content {
+  display: grid;
+  grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+  margin: 40px auto;
+}
+
+.book-detail-cover {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.book-detail-cover img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .book-detail-content {
+    grid-template-columns: 1fr;
+  }
+}
+.btn-primary {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #f4c542;
+  color: #17243a;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e0b030;
+}
