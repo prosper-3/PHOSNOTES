@@ -825,3 +825,22 @@ button:focus-visible {
 .btn-primary:hover {
   background-color: #e0b030;
 }
+/* Fix book cover visibility on mobile phones */
+@media screen and (max-width: 768px) {
+    .book-cover,
+    .book-cover img,
+    .book-image,
+    .book-image img {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .book-cover img,
+    .book-image img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
